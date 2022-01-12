@@ -25,9 +25,10 @@ SECRET_KEY = 'fzgp4*!9c#i%ah9jl-l!94!urkbmy*5k78(2jea1o64y2_dce4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
+ALLOWED_HOSTS = [
+    'www.tradecfd.se',
+    '*'
+]
 # Application definition
 
 INSTALLED_APPS = [
