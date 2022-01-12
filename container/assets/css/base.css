@@ -1,0 +1,95 @@
+body{
+	/*background:#ECF0F1;*/
+	/*	background:rgba(254, 211, 25, 1);*/
+	min-height:100vh;
+	
+	background: #dcdcdc;  /* fallback for old browsers */
+
+	
+}
+
+.block-wrapper{
+	min-height:100vh;
+}
+
+a{
+	color:#29A3D2;
+	font-weight:bold;
+}
+p{
+	line-height: 1.8rem; 
+}
+.hover-function:hover{
+	transform:scale(0.99);
+}
+.container-wrapper{
+    max-width: 1210px;
+    margin:0 auto 0 auto;
+    box-shadow: 0 1px 20px 0 rgb(0 0 0 / 10%);
+    margin-bottom:20px;
+}
+
+/*This is base template for main and side container.*/
+.container-flex{
+	display:flex;
+	flex-wrap:wrap;
+	height:100%;
+}
+.main-container{
+	width:800px;
+	flex-grow:1;
+	background-color:white;
+}
+
+.side-container{
+	background-color:white;
+	min-width:350px;
+	max-width:400px;
+	flex-grow:1;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+   
+   
+
+/*Scrollbar styling*/
+/*body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+ 		background-color:#21212E;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color:#3B3B42;
+  border-radius:10px;
+  opacity:0.1;
+}
+*/
+/*Using at Guest Post site*/
+
+.cover-image{
+	max-width:600px;
+	max-height:350px;
+	margin:10px auto 0 auto;
+}
+
+.cover-image img{
+	width:100%;
+	box-shadow: 0 1px 20px 0 rgb(0 0 0 / 10%);
+}
+@media(max-width:550px){
+	.cover-image{
+		margin:0px auto 0 auto;
+	}
+}
+
+@media(max-width:1200px){
+	.side-container{
+		max-width:100%;
+	}
+}

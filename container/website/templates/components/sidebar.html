@@ -1,0 +1,108 @@
+
+{% load static from staticfiles %}
+<div class="">
+	{% for guestPost in guestPosts %}
+	<a  
+		href="{% url 'website:articleDetail' slug=guestPost.slug%}" 
+		style="text-decoration:none;" 
+		class="d-flex mt-5 border w-100"
+	> 
+		<div class="d-flex">
+			<div class="d-flex flex-column justify-content-center">
+				<img class="rounded" src="{{guestPost.cover_image.url}}" style="width:100px; height:100px"
+				/>
+			</div>
+			<div class="p-2 d-flex flex-column justify-content-between">
+				<h4 style="font-size: 18px;">
+					{{guestPost.article_title}}
+				</h4>
+
+				<hr class="m-0" />
+				<div class="m-0">
+					<small class="m-0">{{guestPost.created_at | date:"M d Y" }}</small>
+				</div>
+			</div>
+		</div>
+	</a>
+	{% endfor %}
+	<div class="d-flex justify-content-center">
+		<a 
+			href="/artiklar"
+			class="m-2" 
+		>
+			Se fler artiklar 
+		</a>
+	</div>
+	<h4 class="text-center mt-5"> Handla Krypto Via Binance </h4>
+	<a 
+		class="m-5" 
+		href="https://www.binance.com/en/register?ref=JTZNNQHD" 
+		target="_blank"> 
+		Till Binance 
+	</a>
+	<!-- TradingView Widget BEGIN -->
+	<div class="tradingview-widget-container">
+	  <div class="tradingview-widget-container__widget"></div>
+	  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Krypto</span></a> by TradingView</div>
+	  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+	  {
+	  "colorTheme": "dark",
+	  "dateRange": "12M",
+	  "showChart": false,
+	  "locale": "en",
+	  "largeChartUrl": "",
+	  "isTransparent": true,
+	  "showSymbolLogo": true,
+	  "showFloatingTooltip": false,
+	  "width": "320",
+	  "height": "250",
+	  "tabs": [
+	    {
+	      "title": "Krypto",
+	      "symbols": [
+	        {
+	          "s": "BINANCE:BTCUSDT",
+	          "d": "Bitcoin"
+	        },
+	        {
+	          "s": "BINANCE:ETHUSDT",
+	          "d": "Ethereum"
+	        },
+	        {
+	          "s": "BINANCE:XRPUSDT",
+	          "d": "Xrp"
+	        }
+	      ]
+	    }
+	  ]
+	}
+	  </script>
+	</div>
+	<!-- TradingView Widget END -->
+	<br>
+
+
+	{% for broker in brokers %}
+	<a  
+		href="{% url 'website:articleDetail' slug=broker.slug%}" 
+		style="text-decoration:none;" 
+		class="d-flex mt-3 border w-100"
+	> 
+		<div class="d-flex">
+			<div class="d-flex flex-column justify-content-center">
+				<img class="rounded" src="{{broker.cover_image.url}}" style="width:100px; height:100px"/>
+			</div>
+			<div class="p-2 d-flex flex-column justify-content-between">
+				<h4 style="font-size: 18px;">
+					{{broker.article_title}}
+				</h4>
+
+				<hr class="m-0" />
+				<div class="m-0">
+					<small class="m-0">Läs mer</small>
+				</div>
+			</div>
+		</div>
+	</a>
+	{% endfor %}
+</div>

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block extra_html_head %}
+<title> 
+	Vad är cfd handel och hur fungerar det? | Tradecfd.se
+ </title>
+<meta name="description" content="Cfd-handel, Contract For Difference, är en relativt ny handelsform som snabbt blivit populär bland daytraders som följer kursutvecklingarna på börsen." >
+<link rel="canonical" href="/cfd-handel" />
+
+
+
+<link rel="stylesheet" href="{% static 'styleFolder/index.css' %}">
+<link rel="stylesheet" href="{% static 'index.css' %}">
+
+
+
+<meta property="og:title" content="Vad är cfd handel och hur fungerar det? | Tradecfd.se" />
+<meta property="og:url" content="/cfd-handel" />
+<meta property="og:description" content="Cfd-handel, Contract For Difference, är en relativt ny handelsform som snabbt blivit populär bland daytraders som följer kursutvecklingarna på börsen.">
+
+
+{% endblock %}
+{% load static %}
+
+{% block content_container %}
+
+<div class="container-wrapper mt-3">
+	<div class="container-flex">
+		<div class="main-container p-3">
+			<div class="row align-items-center">
+				<div class="col-sm-8 text-center">
+					<h1 style="font-size:30px;">{{article.article_title}}</h1>
+					<p class="pl-2">
+						
+					</p>
+				</div>
+				{% if article.cover_image %}
+				<div class="col-sm-4 text-center">
+					<img src="{{article.cover_image.url}}" style="width:250px;" />
+				</div>
+				{% endif %}
+			</div>
+			<hr>
+			{{ article.content | safe }}
+			<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+			<script type="text/javascript">
+				new TradingView.widget(
+				{
+				"width": "100%", 
+				"height" : 610,
+				"symbol": "{{article.ticket_name}}",
+				"interval": "D",
+				"timezone": "Etc/UTC",
+				"theme": "Light",
+				"style": "1",
+				"locale": "en",
+				"toolbar_bg": "#f1f3f6",
+				"enable_publishing": false,
+				"allow_symbol_change": true,
+				"container_id": "tradingview_3418f"
+				});
+			</script>
+		</div>
+		<div class="side-container d-flex flex-column justify-content-between">
+			Sidebar
+		</div>	
+	</div>
+</div>
+
+<div class="curved mt-3">
+	<svg viewBox="0 0 1440 319">
+		<path fill="rgb(85, 85, 85, 0.8)" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+	</svg>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+	
+				
+				
+
+					
+		
+		

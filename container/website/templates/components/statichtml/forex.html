@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block extra_html_head %}
+<title> 
+	Handla valuta: kom igång och trada med valuta | Tradecfd.se
+ </title>
+<meta name="description" content="Hur handlar man med valuta? Valutahandel, även kallad Forextrading,
+är de flesta daytraders första köp. Lär dig hur man köper och säljer valuta i realtid!" >
+<link rel="canonical" href="/forex-valuta" />
+
+
+
+<link rel="stylesheet" href="{% static 'styleFolder/index.css' %}">
+<link rel="stylesheet" href="{% static 'index.css' %}">
+
+
+
+<meta property="og:title" content="Handla valuta: kom igång och trada med valuta | Tradecfd.se" />
+<meta property="og:url" content="/forex-valuta" />
+<meta property="og:description" content="Hur handlar man med valuta? Valutahandel, även kallad Forextrading,
+är de flesta daytraders första köp. Lär dig hur man köper och säljer valuta i realtid!">
+
+
+{% endblock %}
+{% load static %}
+
+{% block content_container %}
+
+<div class="container-wrapper mt-3">
+	<div class="container-flex">
+		<div class="main-container p-3">
+			<div class="row align-items-center">
+				<div class="col-sm-8 text-center">
+					<h1 style="font-size:30px;">Forex Valuta</h1>
+					<p class="">
+						Syftet med valutahandel är att skaffa sig en så stor vinst som möjligt när man köper och säljer två olika valutor. I princip kan man handla med vilka valutor som helst, men bland de mest omsatta valutaparen är EUR/USD, GBP/USD och USD/JPY.
+					</p>
+				</div>
+				<div class="col-sm-4 text-center">
+					<img src="{% static 'images/cover-images/valutor.jpg' %}" style="width:250px;" />
+				</div>
+			</div>
+			<hr>
+			<div class="mt-5">
+				<h3> Vad är valutahandel? </h3>
+				<p class="pl-2">
+					Handel med valuta kallas för Forex, Foreign Exchange och är den marknad som omsätter mest. En del uppskattar att valutahandel omsätter cirka 5 biljoner dollar dagligen. När man bedriver valutahandel innebär det att du köper en valuta och säljer en annan och därför pratar man om valutapar. Valutapar skrivs t. ex. så här: EUR/GBP (basvaluta/motvaluta). Den första valutan, i det här fallet euro, kallas för basvalutan och den andra är motvalutan (här det brittiska pundet).
+				</p>
+				<h5> När du handlar valutapar finns det två scenarier: </h5>
+				<ol>
+					<li class="mt-2">
+						Du bestämmer dig för att köpa EUR/JPY. Du tror att euron stärks gentemot japanska yenen och när det sker så har gjort en vinst. Enkelt sagt har du köpt basvalutan (EUR) och sålt motvalutan (JPY).
+					</li>
+
+					<li class="mt-2">
+						Du vill sälja EUR/JPY. Du gissar på att basvalutan försvagas gentemot motvalutan och därför ska du sälja valutaparet. När värdet minskar kan du köpa tillbaka basvalutan till ett förmånligare pris och därigenom göra vinst.
+					</li>
+				</ol>
+			</div>
+			<div class="mt-5">
+				<h3> När kan man handla valuta? </h3>
+				<p class="pl-2">
+					Det går i princip att handla med valuta dygnet runt eftersom när det är natt och stängt på ett ställe så är det dag och öppet på ett annat ställe i världen. Veckans valutahandel börjar i Australien och slutar i USA.
+				</p>
+			</div>
+			<div class="mt-5">
+				<h3> Vilka handlar med valuta?</h3>
+				<p class="pl-2">
+					Det som styr en valutas kursutveckling är tillgång och efterfrågan och de faktorer som påverkar kurserna är bl. a. olika politiska och ekonomiska beslut, penningpolitiken som drivs i ett land och valutaspekulationerna.
+				</p>
+			</div>
+			<div class="mt-5">
+				<h3>Pips </h3>
+				<p class="pl-2">
+					Termen pips, percentage in point, används i samband med kursförändringen i valutapar och enheten skrivs med fyra decimaler, men det finns fall där fem decimaler används. Låt oss ta EUR/USD som exempel; Ponera att EUR/USD säljs för 1, 1043 men går ner till 1,1039, då har priset sjunkit med 4 pips och motsvarar i det här fallet 0,0004 $.
+				</p>
+			</div>
+			<div class="mt-5">
+				<h3> Valutahandel och hävstång</h3>
+				<p class="pl-2">
+					Handlare som har ett mindre kapital kan gå in och investera med hjälp av hävstång. Enkelt uttryckt lånar handlaren pengar av mäklaren för att öka sitt kapital. Låt oss säga att kursutvecklingen är 0,5% så ger ett litet insatt kapital på 100 $ endast 0,50 $ medan samma procentandel på ett kapital på 100 000 $ ger 500 $ i vinst.
+					<br>
+					Handlare som har ett mindre kapital kan gå in och investera med hjälp av hävstång. Enkelt uttryckt lånar handlaren pengar av mäklaren för att öka sitt kapital. Låt oss säga att kursutvecklingen är 0,5% så ger ett litet insatt kapital på 100 $ endast 0,50 $ medan samma procentandel på ett kapital på 100 000 $ ger 500 $ i vinst.
+				</p>
+			</div>
+			<div class="mt-5 text-center">
+				<h3>Förkortningar på de vanligaste valutorna</h3>
+				<p class="pl-2">
+					Det är bra att känna till förkortningarna för de mest omsatta valutorna:
+				</p>
+				<ul class="d-flex flex-wrap justify-content-between" style="list-style-type:none;">
+					<li class="m-4 border p-3 rounded d-flex flex-column justify-content-center align-items-center" style="width:200px; height:70px;">
+						EUR - euro
+					</li>
+					<li class="m-4 border p-3 rounded" style="width:200px; height:70px;">
+						JPY - japanska yen
+					</li>
+					<li class="m-4 border p-3 rounded" style="width:200px; height:70px;">
+						GBP - engelska pund
+					</li>
+					<li class="m-4 border p-3 rounded" style="width:200px; height:70px;">
+						AUD - australiska dollar
+					</li>
+					<li class="m-4 border p-3 rounded" style="width:200px; height:70px;">
+						USD - amerikanska dollar
+					</li>
+					<li class="m-4 border p-3 rounded" style="width:200px; height:70px;">
+						CAD - kanadensiska dollar
+					</li>
+				</ul>
+			</div>
+			<div class="mt-5">
+				<h3>Demokonto</h3>
+				<p class="pl-2">
+					Valutamäklarna erbjuder demokonton laddade med låtsaspengar som du kan träna valutahandel på. I början kan det te sig lite komplicerat men med lite träning kommer du att ha baskunskaperna i hur valutahandel går till. Det fina med ett testkonto för valutahandel är att du inte riskerar dina egna pengar.
+				</p>
+			</div>
+			<div class="mt-5">
+				<h3>Ska vinster från valutahandel beskattas?</h3>
+				<p class="pl-2">
+					Ja. Vinster från valutahandel räknas som kapitalinkomster och ska tas upp i den årliga deklarationen. Kom ihåg att du kan göra avdrag för eventuella förluster.
+				</p>
+			</div>
+		</div>
+		<div class="side-container d-flex flex-column justify-content-between">
+			{% include 'components/sidebar.html' %}
+		</div>	
+	</div>
+</div>
+
+<div class="curved mt-3">
+	<svg viewBox="0 0 1440 319">
+		<path fill="rgb(85, 85, 85, 0.8)" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+	</svg>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+	
+				
+				
+
+					
+		
+		
